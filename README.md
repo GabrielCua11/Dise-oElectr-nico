@@ -2,7 +2,7 @@
 
 ## Link al video de YouTube
 
-[Video demosrtrativo](URL)
+[Video demostrativo de Gabriel Cuá](URL)
 
 ## Explicación
 
@@ -53,3 +53,13 @@ void USART2_write(uint8_t ch) {
 #### Descripción
 La función `USART2_write(uint8_t ch)` está diseñada para enviar un carácter a través de la interfaz USART2. Esta función maneja la transmisión de caracteres uno a uno, asegurándose de que el registro de transmisión esté listo antes de enviar un nuevo carácter.
 
+### Función `USART2_read(void)`
+```
+uint8_t USART2_read(void) {
+
+	while(USART2->ISR & 0x0020){}
+	return USART2->RDR;
+}
+```
+#### Descripción
+La función USART2_read() está diseñada para leer un carácter desde la interfaz USART2. Esta función verifica continuamente si hay un carácter disponible en el registro de recepción y, una vez disponible, lo devuelve.
