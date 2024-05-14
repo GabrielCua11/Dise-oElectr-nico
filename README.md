@@ -62,4 +62,4 @@ uint8_t USART2_read(void) {
 }
 ```
 #### Descripción
-La función USART2_read() está diseñada para leer un carácter desde la interfaz USART2. Esta función verifica continuamente si hay un carácter disponible en el registro de recepción y, una vez disponible, lo devuelve.
+La función `USART2_read(void)` está diseñada para leer un carácter desde la interfaz USART2. Esta función verifica continuamente si hay un carácter disponible en el registro de recepción y, una vez disponible, lo devuelve.
